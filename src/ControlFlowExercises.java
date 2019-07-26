@@ -72,16 +72,21 @@ public class ControlFlowExercises {
 
         //example 3
         Scanner scan = new Scanner(System.in);
+            String answers;
 //        System.out.println("Enter an integer: ");
 //        int userInput = scan.nextInt();
-        System.out.println("What number would you like to stop at: ");
-        int userInput = scan.nextInt();
-        System.out.println("Here is your table\n");
-        System.out.println("number | squared | cubed \n" + "==================\n");
-        for (int g = 1; g <= userInput; g++) {
-            System.out.println(g + "      | " + g * g + "      | " + g * g * g + "\n");
-        }
-//        System.out.println("Would you like to continue?");
+        do {
+            System.out.println("What number would you like to stop at: ");
+            int userInput = scan.nextInt();
+            System.out.println("Here is your table\n");
+            System.out.println("number | squared | cubed \n" + "=======================\n");
+            for (int g = 1; g <= userInput; g++) {
+                System.out.printf(g + "      | " + g * g + "       | " + g * g * g + "\n");
+            }
+            System.out.println("Would you like to continue (y/n)?");
+            answers = scan.nextLine();
+            }while (answers.equalsIgnoreCase("y"));
+
 
         //example 4
         Scanner grade = new Scanner(System.in);
