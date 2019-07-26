@@ -72,9 +72,10 @@ public class ControlFlowExercises {
 
         //example 3
         Scanner scan = new Scanner(System.in);
-            String answers;
+//            String answers;
 //        System.out.println("Enter an integer: ");
 //        int userInput = scan.nextInt();
+        String answers= scan.nextLine();
         do {
             System.out.println("What number would you like to stop at: ");
             int userInput = scan.nextInt();
@@ -84,7 +85,7 @@ public class ControlFlowExercises {
                 System.out.printf(g + "      | " + g * g + "       | " + g * g * g + "\n");
             }
             System.out.println("Would you like to continue (y/n)?");
-            answers = scan.nextLine();
+
             }while (answers.equalsIgnoreCase("y"));
 
 
