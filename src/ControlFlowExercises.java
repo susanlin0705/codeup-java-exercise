@@ -25,36 +25,50 @@ public class ControlFlowExercises {
         fizzBuzz(30);
 
         //example 1
-        int j = 5;
-        while (j <= 15) {
+//        int j = 5;
+//        while (j <= 15) {
+//            System.out.println(j);
+//            j++;
+//        }
+        for (int j =5; j<=15; j++){
             System.out.println(j);
-            j++;
         }
 
         //example 2-1
-        int k = 2;
-        do {
+//        int k = 2;
+//        do {
+//            System.out.println(k);
+//            k += 2;
+//        }
+//        while (k < 100);
+        for (int k=2; k<100; k+=2){
             System.out.println(k);
-            k += 2;
         }
-        while (k < 100);
 
 
         //example 2-2
-        int l = 100;
-        do {
+//        int l = 100;
+//        do {
+//            System.out.println(l);
+//            l -= 5;
+//        }
+//        while (l >= 5);
+
+        for (int l=100; l>=-10; l-=5){
             System.out.println(l);
-            l -= 5;
         }
-        while (l >= 5);
 
         //example 2-3
-        long i = 2;
-        do {
+//        long i = 2;
+//        do {
+//            System.out.println(i);
+//            i *= i;
+//        }
+//        while (i < 1000000);
+
+        for (long i= 2; i<1000000; i*=i){
             System.out.println(i);
-            i *= i;
         }
-        while (i < 1000000);
 
         //example 3
         Scanner scan = new Scanner(System.in);
@@ -63,33 +77,35 @@ public class ControlFlowExercises {
         System.out.println("What number would you like to stop at: ");
         int userInput = scan.nextInt();
         System.out.println("Here is your table\n");
-        System.out.println("number | squared | cubed \n"+"==================\n");
-        for(int g=1; g<=userInput;g++){
-            System.out.println(g + "      | " + g*g + "      | " + g*g*g + "\n");
+        System.out.println("number | squared | cubed \n" + "==================\n");
+        for (int g = 1; g <= userInput; g++) {
+            System.out.println(g + "      | " + g * g + "      | " + g * g * g + "\n");
         }
 //        System.out.println("Would you like to continue?");
 
         //example 4
         Scanner grade = new Scanner(System.in);
         System.out.println("Please enter the grade from 0 to 100.");
-        int userGrade= grade.nextInt();
-//        Scanner sc = new Scanner(System.in);
-//        System.out.println("Do you want to continue?[y/N]");
-//        String answer = sc.next();
-//        boolean newconfirm= answer.equals("y");
+        int userGrade = grade.nextInt();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Do you want to continue?[y/N]");
+        String answer = sc.next();
+        boolean newconfirm = answer.equals("y");
+        if (newconfirm) {
 
-        if (userGrade>=88){
-            System.out.println("You got A!");
-        }else if(userGrade<88 || userGrade>=80){
-            System.out.println("You got B!");
-        }else if(userGrade<80 || userGrade>=67){
-            System.out.println("You got C!");
-        }else if(userGrade<67 || userGrade>=60){
-            System.out.println("You got D!");
-        }else{
-            System.out.println("You got F!");
+            if (userGrade >= 88) {
+                System.out.println("You got A!");
+            } else if (userGrade < 88 || userGrade >= 80) {
+                System.out.println("You got B!");
+            } else if (userGrade < 80 || userGrade >= 67) {
+                System.out.println("You got C!");
+            } else if (userGrade < 67 || userGrade >= 60) {
+                System.out.println("You got D!");
+            } else {
+                System.out.println("You got F!");
+            }
         }
-
+    }
 
 
 
@@ -98,4 +114,4 @@ public class ControlFlowExercises {
 
 
     }
-}
+
