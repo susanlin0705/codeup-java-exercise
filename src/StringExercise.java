@@ -5,5 +5,10 @@ public class StringExercise {
                 "and the amazing triple backslash \\\\\\!";
 
         System.out.println(message);
+
+
+
+        // String message ="We don't need to education\n";
+//        message+= "We don't need to thought control\n\n";
     }
 }
