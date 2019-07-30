@@ -19,6 +19,10 @@ public class MethodsExercises {
     public static double Modulus(double a, double b){
         return a%b;
     }
+    public static double multi(double a, int b){
+        if (b<=0) return 0;
+        return a + multi (a,b-1);
+    }
     public static int getInterger(int min, int max) {
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter the number between 1 to 10");
@@ -42,6 +46,24 @@ public class MethodsExercises {
     }
 
 
+    public static int roll(int max){
+        return (int)(Math.random() * max) + 1;
+    }
+    public static int diceSide(){
+        Scanner dice = new Scanner(System.in);
+        System.out.println("Enter how many side?");
+        int diceSides = dice.nextInt();
+        System.out.println("Roll the dice");
+
+        int roll1=roll(diceSides);
+        System.out.println("your number is "+ roll1);
+        int roll2=roll(diceSides);
+        System.out.println("your number is "+ roll2);
+        return roll1+roll2;
+
+    }
+
+
 
 
         public static void main (String[]args){
@@ -52,7 +74,7 @@ public class MethodsExercises {
             System.out.println(Modulus(4, 3));
             System.out.println(getInterger(1, 10));
             System.out.println(fact());
-
+            System.out.println(diceSide());
         }
 
 
