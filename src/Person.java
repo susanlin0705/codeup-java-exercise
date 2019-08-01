@@ -34,17 +34,14 @@ public class Person {
     public void sayHello(){
         System.out.println("hello "+getName());
     }
-//    public boolean canHaveSexWith(Person person) {
-//        if (this.age >= 18 && person.getAge() >= 18) {
-//            return true;
-//        }
-//
-//        return false;
-//    }
+
 
 //    public static int getTotalPeople() {
 //        return totalPeople;
 //    }
+    public Person(String name){
+        this.name = name;
+    }
 
     public static void main(String[] args) {
 //        Person personA= new Person("Dane",32);
@@ -64,7 +61,7 @@ public class Person {
 //        personB.sayHello();
 //        personB.sayAge();
 //
-//        System.out.println(personB.canHaveSexWith(personA));
+
 //        System.out.println(Person.getTotalPeople());
 //    }
 
