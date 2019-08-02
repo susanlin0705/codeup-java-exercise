@@ -1,28 +1,75 @@
 package shapes;
 
-public class Rectangle {
-    protected double length;
-    protected double width;
+public class Rectangle extends Quadrilateral implements Measurable{
+
+
 
     public Rectangle(double length, double width) {
-        this.length = length;
-        this.width = width;
+        super(length, width);
     }
 
-    public double getArea() {
-        return this.length*this.width;
-
-    }
-
+    @Override
     public double getPerimeter() {
-        return this.length*2+ this.width*2;
+        return 0;
     }
 
-    public static void main(String[] args) {
-        Rectangle rec = new Rectangle(4,5);
-        System.out.println(rec.getArea());
-        System.out.println(rec.getPerimeter());
+    @Override
+    public double getArea() {
+        return 0;
     }
+
+    @Override
+    public void setLength(double length) {
+
+    }
+
+    @Override
+    public void setWidth(double width) {
+
+    }
+
+//    public abstract void setLength(double length) ;
+//    public abstract void setWidth(double width);
+//
+//
+//    double getPerimeter();
+//    double getArea();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//    protected double length;
+//    protected double width;
+//
+//    public Rectangle(double length, double width) {
+//        this.length = length;
+//        this.width = width;
+//    }
+//
+//    public double getArea() {
+//        return this.length*this.width;
+//
+//    }
+//
+//    public double getPerimeter() {
+//        return this.length*2+ this.width*2;
+//    }
+//
+//    public static void main(String[] args) {
+//        Rectangle rec = new Rectangle(4,5);
+//        System.out.println(rec.getArea());
+//        System.out.println(rec.getPerimeter());
+//    }
 
 }
 
