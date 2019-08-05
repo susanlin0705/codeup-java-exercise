@@ -11,6 +11,7 @@ public class Human {
         this.name= name;
     }
 
+
     public boolean isSpeak() {
         return speak;
     }

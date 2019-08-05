@@ -17,7 +17,7 @@ public class ArrayListsExample {
         names.add("Sophie");
         //
         for (int i= 0; i< names.size(); i++ ){
-            System.out.println(names);
+            System.out.println(names.get(i));
         }
 
         //will give you each name
