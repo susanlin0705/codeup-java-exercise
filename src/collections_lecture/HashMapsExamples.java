@@ -31,6 +31,10 @@ public class HashMapsExamples {
         System.out.println("people.putIfAbsent(34567,\"Bobby\") = " + people.putIfAbsent(34567, "Bobby"));
 
         people.remove(34567);
+
+//        people.clear();
+
+
         //hashMap has no loop
         for(Integer ssn :people.keySet()){
             System.out.println("ssn = " +ssn);
