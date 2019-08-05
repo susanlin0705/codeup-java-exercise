@@ -6,5 +6,4 @@ public interface Tasks  {
     String answerQuestion(String question);
 
 
-
 }

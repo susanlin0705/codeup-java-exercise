@@ -31,7 +31,20 @@ public class Instructor extends Human implements Tasks{
     //when you implement
     @Override
     public String[] teach() {
-        return new String[0];// will give answer it later.
+        //list of subjects
+        String[] subjects = new String[5];
+        subjects[0]="java";
+        subjects[1]="js";
+        subjects[2]="mysql";
+        subjects[3]="spring";
+        subjects[4]="jquery";
+
+        if(getName().equalsIgnoreCase("Daniel")){
+            subjects[4]="react";
+        }
+
+
+        return subjects;// will give answer it later.
     }
 
     @Override

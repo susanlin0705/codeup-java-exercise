@@ -9,9 +9,15 @@ public class HashMapsAndHumans {
         HashMap<Long, Instructor> payroll = new HashMap<>();
         payroll.put(12L,fer);
         payroll.put(18L,daniel);
-        for(Instructor ins:payroll.values()){
-            System.out.println("ins.getName() = " + ins.getName());
-            System.out.println("ins.answerQuestion(\"Is this a question?\") = " + ins.answerQuestion("Is this a question?"));
+        for(Instructor instructor:payroll.values()){
+            System.out.println("ins.getName() = " + instructor.getName());
+            System.out.println("ins.answerQuestion(\"Is this a question?\") = " + instructor.answerQuestion("Is this a question?"));
+
+        for(String subject: instructor.teach()){
+            System.out.println(subject);
+        }
+
+
         }
     }
 }
