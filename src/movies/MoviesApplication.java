@@ -29,40 +29,47 @@ public class MoviesApplication {
          }
      }
 
+    public void moviesByCategory(Movie[] movies, String category) {
+        for(Movie movie :movies) {
+            if(movie.getCategory().contains(category)) {
+                System.out.println(movie.getName()+ " -- " + movie.getCategory());
+            }
+        }
+    }
 
     public static void main(String[] args) {
         MoviesApplication movie1 = new MoviesApplication();
-        movie1.findMovies();
+
         Movie[] movies = MoviesArray.findAll();
 
 //        Scanner scan = new Scanner(System.in);
-        System.out.println("Please Enter the Number");
-//        int input = scan.nextInt();
-        Input input = new Input();
-        int userInput= input.getInt(0,5);
 
-        System.out.println("Are you an admin?");
-        boolean userAnswer = input.yesNo();
+        boolean keepGoing = true;
 
-//        do {
-//            if (input==1)
-                movie1.displayMovies(movies);
-//            } else if (input==2) {
-//                return animated movie;
-//            }else if (input=2){
-//                return drama;
-//            }else if (input==3){
-//                return horror movie;
-//            }else if (input==4){
-//                return horror movie;
-//            }else if (input){
-//                return scifi movie;
-//            }else{
-//                return exit;
-//            }
-//        }while (true);
+            do {
+                movie1.findMovies();
+                System.out.println("Please Enter the Number");
+                Input typeIn = new Input();
+                Integer input = typeIn.getInt(0, 5);
 
 
-    }
+                if (input == 0) {
+                    keepGoing=false;
+                } else if (input.equals(1)) {
+                    movie1.displayMovies(movies);
+                } else if (input.equals(2)) {
+                    movie1.moviesByCategory(movies, "animated");
+                } else if (input.equals(3)) {
+                    movie1.moviesByCategory(movies, "drama");
+                } else if (input.equals(4)) {
+                    movie1.moviesByCategory(movies, "horror");
+                } else if (input.equals(5)) {
+                    movie1.moviesByCategory(movies, "scifi");
+                } else {
+                    System.out.println("please type again");
+                }
+            } while (keepGoing);
+
+        }
 
 }

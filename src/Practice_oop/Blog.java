@@ -50,8 +50,9 @@ public class Blog {
     public static void main(String[] args) {
 
         Blog name1 = new Blog("susan", "I love dogs", 2,true);
-        System.out.println(name1.getAuthor());
+        System.out.println(name1.getAuthor()+name1.getContent()+name1.getViewCount());
         name1.setAuthor("Dane Miller");
+        System.out.println(name1.getAuthor());
         name1.setAuthor("Mario");
         System.out.println(name1.getAuthor());
         System.out.println("Have you check your spelling? "+ name1.getCheckSpelling());

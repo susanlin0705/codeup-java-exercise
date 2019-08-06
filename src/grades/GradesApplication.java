@@ -20,7 +20,7 @@ public class GradesApplication {
         Student peter = new Student("Peter");
         peter.addGrade(100);
         peter.addGrade(60);
-        peter.addGrade(700);
+        peter.addGrade(70);
         Student mario = new Student("Mario");
         mario.addGrade(90);
         mario.addGrade(100);
@@ -33,36 +33,60 @@ public class GradesApplication {
 
 //        System.out.println(students);
 //        System.out.println(victor.getGradeAverage());
-        System.out.println("students.keySet() = " + students.keySet()); //github用戶名稱
-        System.out.println("What student would you like to see more information on? If not please type 'stop'");
-
+        System.out.println("students.keySet() = " + students.keySet()); //github用戶所有名稱
+//        System.out.println("What student would you like to see more information on? If not please type 'stop'");
+//
         boolean keepgoing = true;
-        Scanner scan = new Scanner(System.in);
+//        Scanner scan = new Scanner(System.in);
         do {
+            System.out.println("What student would you like to see more information on? If not please type 'stop'");
+            Scanner scan = new Scanner(System.in);
             String userInput = scan.nextLine();
-//            for(student: students.keySet()){
+
                 if (userInput.equalsIgnoreCase("victorpena")){
-                    System.out.println("Your grade average is = "+victor.getGradeAverage());
+                    System.out.println(students.get("victorpena").getName()+" |  Github name: "+  userInput +"  |  "+victor.getGradeAverage() );
                 }else if(userInput.equalsIgnoreCase("peterhollman")){
-                    System.out.println(peter.getGradeAverage());
+                    System.out.println(students.get("peterhollman").getName()+" |  Github name: "+  userInput +"  |  "+peter.getGradeAverage());
                 }else if (userInput.equalsIgnoreCase("susanlin")){
-                    System.out.println(susan.getGradeAverage());
+                    System.out.println(students.get("susanlin").getName()+" |  Github name: "+  userInput +"  |  "+susan.getGradeAverage());
                 }else if (userInput.equalsIgnoreCase("mariojohnson")){
-                    System.out.println(mario.getGradeAverage());
-                }else if(userInput.equalsIgnoreCase("Stop")){
-                    keepgoing =false;
+                    System.out.println(students.get("mariojohnson").getName()+" |  Github name: "+  userInput +"  |  "+mario.getGradeAverage());
+                }else if(userInput.equalsIgnoreCase("Stop")) {
+                    keepgoing = false;
                 }else {
-                    System.out.println("這個人不存在！This person is not exist");
+                    System.out.println("這個人不存在！This person does not exist");
                 }
 //            }
         }while(keepgoing);
 
-
-
-
-
-
 //        System.out.println(students.get("victorpena").getName());// 名字
+
+
+    //--------------------------the walk through----------------------------//
+
+//        public class GradesApplication {
+//            static HashMap<String, Student> students = new HashMap<>();
+//
+//
+//            public static void main(String[] args) {
+//                showStudents();//放置在加入成績之後
+//            }
+//
+//            public static void showStudents(){
+//                System.out.println("Here is Github username");
+//                for (String username: students.keySet()){
+//                    System.out.print(username + " | " );
+//                }
+//            }
+//
+//        }
+
+
+
+
+
+
+
 
     }
 }
