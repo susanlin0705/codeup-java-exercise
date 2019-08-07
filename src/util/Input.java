@@ -29,6 +29,7 @@ public class Input {
 
         public int getInt(int min, int max) {
             System.out.print("Enter a number between " + min + " and " + max);
+
             do {
                 double userInput = scanner.nextInt();
                 if (userInput < min) {
@@ -50,13 +51,24 @@ public class Input {
 //        }while(true);
 
     }
-
-
+    //using exception try catch
     public int getInt(){
-        System.out.println("Please enter a number: ");
-        int userInput = scanner.nextInt();
-        return userInput;
+        String num;
+        try{
+        num= scanner.nextLine();
+             return Integer.valueOf(num);
+        }catch (NumberFormatException e){
+            System.out.println("try again. error"+ e.getMessage());
+            return getInt();
+        }
     }
+
+//
+//    public int getInt(){
+//        System.out.println("Please enter a number: ");
+//        int userInput = scanner.nextInt();
+//        return userInput;
+//    }
 
 
     public double getDouble(double min, double max){

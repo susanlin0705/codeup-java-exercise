@@ -40,7 +40,7 @@ public class MoviesApplication {
     public static void main(String[] args) {
         MoviesApplication movie1 = new MoviesApplication();
 
-        Movie[] movies = MoviesArray.findAll();
+        Movie[] mymovies = MoviesArray.findAll();
 
 //        Scanner scan = new Scanner(System.in);
 
@@ -56,15 +56,15 @@ public class MoviesApplication {
                 if (input == 0) {
                     keepGoing=false;
                 } else if (input.equals(1)) {
-                    movie1.displayMovies(movies);
+                    movie1.displayMovies(mymovies);
                 } else if (input.equals(2)) {
-                    movie1.moviesByCategory(movies, "animated");
+                    movie1.moviesByCategory(mymovies, "animated");
                 } else if (input.equals(3)) {
-                    movie1.moviesByCategory(movies, "drama");
+                    movie1.moviesByCategory(mymovies, "drama");
                 } else if (input.equals(4)) {
-                    movie1.moviesByCategory(movies, "horror");
+                    movie1.moviesByCategory(mymovies, "horror");
                 } else if (input.equals(5)) {
-                    movie1.moviesByCategory(movies, "scifi");
+                    movie1.moviesByCategory(mymovies, "scifi");
                 } else {
                     System.out.println("please type again");
                 }
